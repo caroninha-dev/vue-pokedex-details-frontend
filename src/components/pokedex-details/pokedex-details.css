@@ -1,0 +1,16 @@
+#pokedex-details {
+  padding: 12px;
+  background: #c1c1;
+  display: flex;
+}
+
+.pokedex-details__image img {
+  width: 120px;
+  display: inline-block;
+}
+
+.pokedex-details__name {
+  margin: 16px;
+  font-size: 28px;
+  text-transform: capitalize;
+}
