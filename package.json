@@ -1,7 +1,9 @@
 {
   "name": "@caroninha-dev/pokedex-details",
-  "version": "0.1.0",
-  "private": true,
+  "version": "0.1.1",
+  "main": "dist/brian-component-lib.ssr.js",
+  "browser": "dist/brian-component-lib.esm.js",
+  "module": "dist/brian-component-lib.esm.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/caroninha-dev/vue-pokedex-details-frontend"
