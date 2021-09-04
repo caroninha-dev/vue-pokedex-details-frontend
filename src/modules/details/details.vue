@@ -41,4 +41,4 @@ export default {
 }
 
 </script>
-<style src="./pokedex-details.css"></style>
+<style src="./details.css"></style>
