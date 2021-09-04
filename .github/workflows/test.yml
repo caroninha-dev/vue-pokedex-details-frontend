@@ -1,25 +1,16 @@
 name: CI
-on: [push]
+on:
+  [pull_request]
+
 jobs:
-  build:
-    name: Test
+  test:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v2
-      - name: Use Node.js
+      - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
-          node-version: '12.x'
-      - name: Cache Node.js modules
-        uses: actions/cache@v2
-        with:
-          # npm cache files are stored in `~/.npm` on Linux/macOS
-          path: ~/.npm
-          key: ${{ runner.OS }}-node-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.OS }}-node-
-            ${{ runner.OS }}-
-      - name: Install dependencies
-        run: yarn --frozen-lockfile
-      - name: Test application
-        run: yarn test
+          node-version: ${{ matrix.node-version }}
+      - run: yarn install
+      - run: yarn test

@@ -6,7 +6,7 @@
 
 <script>
 import Details from '@/modules/details/details.vue'
-
+ // teste
 export default {
   name: 'App',
   components: {
