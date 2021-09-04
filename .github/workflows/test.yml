@@ -23,4 +23,5 @@ jobs:
   test:
     needs:
       - build
-    run: yarn test
+    steps:
+      run: yarn test
