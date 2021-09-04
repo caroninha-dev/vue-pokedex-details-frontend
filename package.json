@@ -1,14 +1,14 @@
 {
   "name": "@caroninha-dev/pokedex-details",
-  "version": "0.1.0",
-  "private": true,
+  "version": "0.1.5",
+  "main": "dist/pokedex-details.min.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/caroninha-dev/vue-pokedex-details-frontend"
   },
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build  --target wc --name pokedex-details",
+    "build": "vue-cli-service build",
     "test": "vue-cli-service test:unit --config jest.config.js --no-cache",
     "lint": "vue-cli-service lint"
   },
