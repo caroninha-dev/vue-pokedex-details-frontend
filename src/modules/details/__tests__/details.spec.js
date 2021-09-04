@@ -13,7 +13,7 @@ describe('details.vue', () => {
 
     await Vue.nextTick()
 
-    expect(wrapper.html()).toMatch('pikachasdu')
+    expect(wrapper.html()).toMatch('pikachu')
   })
 
 })
