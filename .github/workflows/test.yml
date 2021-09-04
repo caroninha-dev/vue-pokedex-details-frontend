@@ -1,10 +1,7 @@
 name: CI
-on:
-  push:
-    branches: ['release']
+on: [push]
 jobs:
   build:
-    name: Test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -23,5 +20,7 @@ jobs:
             ${{ runner.OS }}-
       - name: Install dependencies
         run: yarn --frozen-lockfile
-      - name: Test application
-        run: yarn test
+  test:
+    needs:
+      - build
+    run: yarn test
