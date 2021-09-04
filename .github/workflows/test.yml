@@ -2,8 +2,8 @@ name: CI
 on: [push]
 jobs:
   build:
-    name: Install application
-    runs-on: ubuntu-latest  
+    name: Test
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: Use Node.js
@@ -21,14 +21,5 @@ jobs:
             ${{ runner.OS }}-
       - name: Install dependencies
         run: yarn --frozen-lockfile
-        
-    name: Test
-    runs-on: ubuntu-latest
-    steps:
       - name: Test application
-        run: yarn test
-    name: Build
-    runs-on: ubuntu-latest
-    steps:     
-      - name: Build application
         run: yarn test
