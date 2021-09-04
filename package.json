@@ -1,6 +1,6 @@
 {
   "name": "@caroninha-dev/pokedex-details",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "main": "dist/pokedex-details.min.js",
   "repository": {
     "type": "git",
