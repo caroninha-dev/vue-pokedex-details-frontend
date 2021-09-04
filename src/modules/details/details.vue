@@ -1,12 +1,12 @@
 <template>
-  <div id="pokedex-details">
-    <div class="pokedex-details__image">
+  <div id="details">
+    <div class="details__image">
       <img :src="image" />
     </div>
-    <div class="pokedex-details__name">      
+    <div class="details__name">      
       {{ name }}
     </div>
-    <div class="pokedex-details__exp">      
+    <div class="details__exp">      
       {{ base_experience }}
     </div>
   </div>
@@ -41,4 +41,4 @@ export default {
 }
 
 </script>
-<style src="./pokedex-details.css"></style>
+<style src="./details.css"></style>
