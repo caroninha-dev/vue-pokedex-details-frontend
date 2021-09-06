@@ -30,9 +30,14 @@ export default {
   methods: {
     async fetchData() {
       const pokemonId = window.location.pathname.replace('/', '').split('/').shift()
+
+      if (!pokemonId) {
+        window.location.assign('http://pokedex.caroninhadev.com/error');
+        return;
+      }
+
       const url = `https://pokeapi.co/api/v2/pokemon/${pokemonId}`
       const response = await axios.get(url)
-
       this.name = response.data.name
       this.image = response.data.sprites.other.dream_world.front_default
       this.base_experience = response.data.base_experience
